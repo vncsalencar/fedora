@@ -1,0 +1,35 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "always"
+scroll-lines = 1
+color-modes = true
+completion-trigger-len = 1
+auto-save = true
+
+[editor.cursor-shape]
+insert = "underline"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-messages = true
+
+[editor.file-picker]
+git-ignore = true
+hidden = true
+
+[keys.normal]
+"C-s" = ":w"
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["move_line_down", "goto_first_nonwhitespace"] # Maps the enter key to move to start of next line
+X = "extend_line_above"
+D = "delete_char_backward"
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
